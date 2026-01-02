@@ -5,7 +5,7 @@ This repository contains a comparative analysis of Recursive vs. Iterative algor
 * main.cpp = The main code for testing due to its speed over Python and handles massive integers with the Boost library
 * main_no_boost.cpp = The main code with only native packages for those without the extra packages but for big n inputs results may result in integer overflows (even if the integer type is "long long")
 * aka_graph.py = For graph visualization of the code, hard coded to n <= 30 and k = 5
-* aka_py.py = The initial version, may be incomplete but rougly similar to the main C++ code
+* aka_py.py = The initial version, may be incomplete but roughly similar to the main C++ code
 * AKAFP.pdf = Technical report including $c_{op}$ calculations and comparative analysis
 
 # Prerequisites
@@ -16,9 +16,9 @@ This repository contains a comparative analysis of Recursive vs. Iterative algor
 
 # Compilation & Execution 
 ### C++ = 
-Compiling -> ```g++ -I /path/to/boost main.cpp -o stairs_benchmark```, in my case it's ```g++ -I"C:\local\boost_1_90_0" main.cpp -o AKA.exe```
+Compiling -> ```g++ -I /path/to/boost main.cpp -o yourexec_name```, in my case it's ```g++ -I"C:\local\boost_1_90_0" main.cpp -o AKA.exe```
 
-Execution (in the terminal) -> ```./stairs_benchmark <n> <k> <type>```
+Execution (in the terminal) -> ```./yourexec_name <n> <k> <type>``` 
 * n: Number of stairs (e.g., 10000)
 * k: Max steps per stride (e.g., 5)
 * type: 0 for Recursive, 1 for Iterative
