@@ -16,7 +16,7 @@ This repository contains a comparative analysis of Recursive vs. Iterative algor
 
 # Compilation & Execution 
 ### C++ = 
-Compiling -> ```g++ -I /path/to/boost main.cpp -o yourexec_name```, in my case it's ```g++ -I"C:\local\boost_1_90_0" main.cpp -o AKA.exe```
+Compiling (for GCC/G++) -> ```g++ -I /path/to/boost main.cpp -o yourexec_name```, in my case it's ```g++ -I"C:\local\boost_1_90_0" main.cpp -o AKA.exe```. For non boost what works for me is ```g++ -std=c++17 -O2 -Wall -I. -o myapp.exe main.cpp```
 
 Execution (in the terminal) -> ```./yourexec_name <n> <k> <type>``` 
 * n: Number of stairs (e.g., 10000)
