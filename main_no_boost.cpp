@@ -1,7 +1,9 @@
 #include <iostream>
-#include <cstdlib> // Required for atoi
+#include <cstdlib>   // atoi
+#include <chrono>    // timing
 
 using namespace std;
+using namespace std::chrono;
 
 // Recursive Solution: O(k^n)
 long long countWaysRecursive(int n, int k) {
@@ -35,28 +37,37 @@ long long countWaysIterative(int n, int k) {
 }
 
 int main(int argc, char* argv[]) {
-    // We expect 4 arguments: program_name, n, k, and type
     if (argc < 4) {
         cout << "Usage: " << argv[0] << " <n> <k> <type>" << endl;
         cout << "Type: 0 for Recursive, 1 for Iterative" << endl;
         return 1;
     }
 
-    // Convert string arguments to integers
     int n = atoi(argv[1]);
     int k = atoi(argv[2]);
     int type = atoi(argv[3]);
 
+    // Start timing
+    auto start = high_resolution_clock::now();
+
+    long long result;
     if (type == 0) {
-        // Only run Recursive
-        cout << countWaysRecursive(n, k) << endl;
+        result = countWaysRecursive(n, k);
     } else if (type == 1) {
-        // Only run Iterative
-        cout << countWaysIterative(n, k) << endl;
+        result = countWaysIterative(n, k);
     } else {
         cout << "Invalid type. Use 0 for Recursive or 1 for Iterative." << endl;
         return 1;
     }
 
+    // End timing
+    auto end = high_resolution_clock::now();
+    auto duration = duration_cast<milliseconds>(end - start);
+
+    // Output result and runtime
+    cout << "Result: " << result << endl;
+    cout << "Running time: " << duration.count() << " ms" << endl;
+
     return 0;
 }
+
