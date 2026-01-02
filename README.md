@@ -5,7 +5,7 @@ This repository contains a comparative analysis of Recursive vs. Iterative algor
 * main.cpp = The main code for testing due to its speed over Python and handles massive integers with the Boost library
 * main_no_boost.cpp = The main code with only native packages for those without the extra packages but for big n inputs results may result in integer overflows (even if the integer type is "long long")
 * aka_graph.py = For graph visualization of the code, hard coded to n <= 30 and k = 5
-* aka_py.py = The initial version, may be incomplete
+* aka_py.py = The initial version, may be incomplete but rougly similar to the main C++ code
 * AKAFP.pdf = Technical report including $c_{op}$ calculations and comparative analysis
 
 # Prerequisites
@@ -23,7 +23,7 @@ Execution (in the terminal) -> ```./stairs_benchmark <n> <k> <type>```
 * k: Max steps per stride (e.g., 5)
 * type: 0 for Recursive, 1 for Iterative
 ### Python =
-For the graph simply run ```python aka_graph.py``` and for the aka_py.py just run ```python aka_py.py``` in the same directory
+For the graph simply run ```python aka_graph.py``` and for the python version of the algorithm test just run ```python aka_py.py``` in the same directory
 
 # Key Findings
 ![Visual Graph](images/Figure_1.png)
@@ -36,7 +36,7 @@ Our analysis highlights the critical importance of algorithm selection:
 * AfterAcademy: Climbing Stairs Problem Complexity Analysis.
 * Course Slides: Weeks 1-13, Analysis of Algorithm Complexity, Telkom University.
 
-## Special Thanks To
+# Special Thanks To
 ![Cat GIF](images/catKittyGIF.gif)
 
 - Lecturer and its assistant also the whole Analisis Kompleksitas Algoritma teaching team at Fakultas Informatika (School of Computing) in Telkom University
