@@ -16,9 +16,9 @@ This repository contains a comparative analysis of Recursive vs. Iterative algor
 
 # Compilation & Execution 
 ### C++ = 
-```g++ -I /path/to/boost main.cpp -o stairs_benchmark```, in my case it's ```g++ -I"C:\local\boost_1_90_0" main.cpp -o AKA.exe```
+Compiling -> ```g++ -I /path/to/boost main.cpp -o stairs_benchmark```, in my case it's ```g++ -I"C:\local\boost_1_90_0" main.cpp -o AKA.exe```
 
-```./stairs_benchmark <n> <k> <type>```
+Execution (in the terminal) -> ```./stairs_benchmark <n> <k> <type>```
 * n: Number of stairs (e.g., 10000)
 * k: Max steps per stride (e.g., 5)
 * type: 0 for Recursive, 1 for Iterative
@@ -29,7 +29,7 @@ For the graph simply run ```python aka_graph.py``` and for the aka_py.py just ru
 ![Visual Graph](images/Figure_1.png)
 
 Our analysis highlights the critical importance of algorithm selection:
-- **Iterative Approach (O(nk)):** Processed $n=10,000$ in approximately **39 ms**(may be different each time and also depends on the hardware but this number is what I get the most).
+- **Iterative Approach (O(nk)):** Processed $n=10,000$ in approximately **39 ms** (may be different each time and also depends on the hardware but this number is what I get the most).
 - **Recursive Approach (O(k^n)):** For $n=10,000$, the estimated time is **$1.52 \times 10^{2941}$ ms** (Infeasible).
 
 # References
